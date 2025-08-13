@@ -1,0 +1,17 @@
+{
+    "name": "r2-script",
+    "version": "1.0.0",
+    "description": "Da dung thi dung so - da so thi dung dung",
+    "main": "r2.js",
+    "scripts": {
+      "start": "node r2.js"
+    },
+    "dependencies": {
+      "axios": "^1.7.7",
+      "colors": "^1.4.0",
+      "ethers": "^6.13.2",
+      "https-proxy-agent": "^7.0.5"
+    },
+    "author": "CaoBang",
+    "license": "ISC"
+  }
