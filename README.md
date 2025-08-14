@@ -6,6 +6,8 @@ A tool to automatically claim **R2 season 0** tokens, auto swap, stake, add LP, 
 - ✅ Auto claim R2 season 0 tokens
 - ✅ Auto swap, stake, add LP
 - ✅ Support **Pharos** & **Monad** networks
+- ✅ Multi-threaded, multi-account
+
 
 ---
 
