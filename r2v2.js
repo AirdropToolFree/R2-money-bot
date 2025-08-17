@@ -1723,13 +1723,13 @@ async function logger() {
         await getUserPoints(token, userAddress, proxy, userAgent, logger);
 
         // Xử lý các network tasks với logger
+        await initiateTransaction({ address: userAddress }, privateKey, logger);
         await processNetworkTasks(privateKey, networkConfigs.sepolia, 'Sepolia', userAddress, token, proxy, userAgent, logger);
         await sleep(Math.floor(Math.random() * 3000) + 2000);
         await processNetworkTasks(privateKey, networkConfigs.pharos, 'Pharos', userAddress, token, proxy, userAgent, logger);
         await sleep(Math.floor(Math.random() * 3000) + 2000);
         await processNetworkTasks(privateKey, networkConfigs.monad, 'Monad', userAddress, token, proxy, userAgent, logger);
-        await initiateTransaction({ address: userAddress }, privateKey, logger);
-
+    
         parentPort.postMessage({ status: 'success', address: userAddress });
     } catch (error) {
         const wallet = new ethers.Wallet(privateKey);
@@ -1882,3 +1882,4 @@ async function main() {
 }
 
 main().catch(error => console.log(`Lỗi chính: ${error.message}`, 'error'));
+
